@@ -1,23 +1,41 @@
-# 
 
-# deb cdrom:[Debian GNU/Linux testing _Jessie_ - Official Snapshot amd64 NETINST Binary-1 20131006-09:42]/ jessie main
+# deb http://localhost/debian/ sid main contrib non-free
+# deb-src http://localhost/debian/ sid main contrib non-free
 
-#deb cdrom:[Debian GNU/Linux testing _Jessie_ - Official Snapshot amd64 NETINST Binary-1 20131006-09:42]/ jessie main
+#deb http://10.42.65.27/debian/ sid main contrib non-free
+#deb-src http://10.42.65.27/debian/ sid main contrib non-free
 
-deb http://ftp.de.debian.org/debian/ jessie main
-deb-src http://ftp.de.debian.org/debian/ jessie main
+deb http://ftp.us.debian.org/debian/ sid main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ sid main contrib non-free
 
-deb http://security.debian.org/ jessie/updates main
-deb-src http://security.debian.org/ jessie/updates main
 
-# jessie-updates, previously known as 'volatile'
-# Line commented out by installer because it failed to verify:
-#deb http://ftp.de.debian.org/debian/ jessie-updates main
-# Line commented out by installer because it failed to verify:
-#deb-src http://ftp.de.debian.org/debian/ jessie-updates main
+######deb http://ftp.es.debian.org/debian/ experimental main
 
-# jessie-backports, previously on backports.debian.org
-# Line commented out by installer because it failed to verify:
-#deb http://ftp.de.debian.org/debian/ jessie-backports main
-# Line commented out by installer because it failed to verify:
-#deb-src http://ftp.de.debian.org/debian/ jessie-backports main
+
+
+# deb http://localhost/security wheezy/updates main contrib non-free
+# deb-src http://localhost/security wheezy/updates main contrib non-free
+
+deb http://www.deb-multimedia.org sid main non-free
+deb-src http://www.deb-multimedia.org sid main non-free
+
+
+#yacy
+
+# deb http://localhost/yacy/ ./
+
+
+
+# oracle virtualbox
+deb http://download.virtualbox.org/virtualbox/debian wheezy contrib
+
+
+
+
+#gephi
+
+
+#deb http://ppa.launchpad.net/rockclimb/gephi-daily/ubuntu precise main
+
+
+

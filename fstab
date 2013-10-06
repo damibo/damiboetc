@@ -10,3 +10,17 @@ UUID=f11a2667-b364-4d26-a3a2-076da1b6d72c /               ext4    errors=remount
 # swap was on /dev/sda5 during installation
 UUID=1549a53c-71fb-4d86-8541-579abb28a15b none            swap    sw              0       0
 /dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
+
+
+
+
+
+# /home was on /dev/sdb1 during installation
+UUID=cf9b388f-1c92-44e2-9bed-fa3886fcab9f /home           ext4    defaults        0       2
+#/home/mmumedia
+UUID=abd60186-2c0a-440b-92d3-1d87477afe8a /home/mmumedia	ext4	defaults	0	0
+
+//192.168.10.1/Disc-A1 /home/mnt/samba/fonera cifs user,uid=1000,rw,suid,credentials=/root/bin/contra.txt 1 5
+
+UUID=3718d357-3fe7-4a6c-b42c-1ddc8cf6fbbe /media/games	ext4	defaults	0	0
+UUID=20ad261c-5ccf-43d6-890d-b7d4b34aa84d /media/teraymedio	ext4	defaults	0	0
