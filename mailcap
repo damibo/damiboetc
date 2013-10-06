@@ -66,6 +66,7 @@ text/html; /usr/bin/sensible-browser '%s'; description=HTML Text; nametemplate=%
 application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
 text/html; /usr/bin/iceweasel '%s'; description=HTML Text; test=test -n "$DISPLAY";  nametemplate=%s.html
 text/xml; /usr/bin/iceweasel '%s'; description=XML Text; test=test -n "$DISPLAY";  nametemplate=%s.xml
+application/x-info; /usr/bin/info -f '%s'; needsterminal; description=GNU Info document
 message/rfc822; mutt -Rf '%s'; edit=mutt -f '%s'; needsterminal
 application/x-tar; /bin/tar tvf '%s'; print=/bin/tar tvf - | print text/plain:-; copiousoutput
 application/x-gtar; /bin/tar tvzf '%s'; print=/bin/tar tvzf - | print text/plain:-; copiousoutput
