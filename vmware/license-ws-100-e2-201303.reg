@@ -1,0 +1,16 @@
+REGEDIT4
+[HKEY_LOCAL_MACHINE\SOFTWARE\VMware, Inc.\VMware Workstation\Dormant\License.ws.10.0.e2.201303]
+"StartFields"="Cpt, ProductID, LicenseVersion, LicenseType, LicenseEdition, Field2"
+"Field2"="Option, Epoch"
+"Cpt"="COPYRIGHT (c) VMware, Inc. 1999-2013"
+"ProductID"="VMware Workstation"
+"LicenseVersion"="10.0"
+"LicenseType"="Site"
+"LicenseEdition"="ws.vl"
+"Epoch"="2013-03-01"
+"Option"="19"
+"Data"="MaxVcpusPerVm=8;mdate=2013-02-21"
+"DataHash"="048baee4-c58f88c2-8abb15b2-9eb9f3e9-643ba9a0"
+Serial = "HF0A8-FMJ1P-1Z1U1-LK1N2-9AGKJ"
+LastModified = "2013-10-09 @ 18:22:48 UTC"
+"Hash"="803cdfaa-eedeba1c-cbd66858-9d95440c-1988638e"

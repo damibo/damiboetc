@@ -1,0 +1,161 @@
+#!/bin/sh
+#
+# Copyright (C) 1998-2010 VMware, Inc.  All Rights Reserved.
+#
+# This script manages the services needed to run VMware software
+
+### BEGIN INIT INFO
+# Provides: vmamqpd
+# Required-Start: $network
+# Required-Stop: $network
+# X-Start-Before: 
+# X-Stop-After: 
+# Default-Start: 2 3 4
+# Default-Stop: 0 6
+# Short-Description: This service starts and stops vmamqpd
+### END INIT INFO
+
+
+SCRIPTNAME="$(basename $(readlink -f "$0"))"
+MODNAME="vmamqpd"
+ETCDIR=/etc/vmware
+
+. $ETCDIR/bootstrap
+libdir="$LIBDIR"/vmware
+
+. "$libdir"/scripts/util.sh
+
+load_settings "$libdir" || exit 1
+
+# This comment is a hack to prevent RedHat distributions from outputing
+# "Starting <basename of this script>" when running this startup script.
+# We just need to write the word daemon followed by a space
+
+SYSTEM_DAEMON=vmamqpd
+PIDFILE=/var/run/vmamqpd.pid
+
+# Make sure the ESC byte is literal: Ash does not support echo -e
+rc_done='[71G done'
+rc_failed='[71Gfailed'
+
+#
+# Utilities
+#
+
+upperCase() {
+  echo "`echo $1|tr '[:lower:]' '[:upper:]'`"
+}
+
+vmware_start_daemon() {
+   "$libdir/bin/$1" -d $PIDFILE
+   return $?
+}
+
+vmware_stop_daemon() {
+   if [ ! -e "$PIDFILE" ]; then
+      return 0
+   fi
+
+   pid=`cat $PIDFILE`
+
+   if [ "$pid" = "" ]; then
+      return 0
+   fi
+
+   # Kill the process
+   kill -15 $pid
+   # Give it a few seconds to shut down properly
+   for f in '1 2 3 4 5 6 7 8 9 10'; do
+      if ! ps $pid >/dev/null; then
+         # No need to wait if it's already down
+         break
+      fi
+      sleep 1
+   done
+
+   # Give it a few seconds to shut down after the kill
+   for f in '1 2 3 4 5 6 7 8 9 10'; do
+      if ! ps $pid >/dev/null; then
+         # No need to wait if it's already down
+         break
+      fi
+      sleep 1
+   done
+
+   if ps $pid >/dev/null; then
+      # Failed to kill it...
+      return 1
+   else
+      # Success!
+      rm -v $PIDFILE
+      return 0
+   fi
+}
+
+vmware_daemon_status() {
+   echo -n "$1 "
+   if vmware_check_pidfile "/var/run/$1.pid"; then
+      echo 'is running'
+   else
+      echo 'is not running'
+      exitcode=$(($exitcode + 1))
+   fi
+}
+
+main()
+{
+   # See how we were called.
+   case "$1" in
+      start)
+         exitcode='0'
+
+         vmware_exec 'Starting VMware AMQP Service:' vmware_start_daemon $SYSTEM_DAEMON
+         exitcode=$(($exitcode + $?))
+
+
+         if [ "$exitcode" -gt 0 ]; then
+            exit 1
+         fi
+         ;;
+
+      stop)
+         exitcode='0'
+
+         vmware_exec 'Stopping VMware AMQP Service:' vmware_stop_daemon
+         exitcode=$(($exitcode + $?))
+
+         if [ "$exitcode" -gt 0 ]; then
+            exit 1
+         fi
+         ;;
+
+      status)
+         exitcode='0'
+
+         vmware_daemon_status $SYSTEM_DAEMON
+         exitcode=$(($exitcode + $?))
+
+         if [ "$exitcode" -ne 0 ]; then
+            exit 1
+         fi
+         ;;
+
+      restart | force-reload)
+         "$0" stop && "$0" start
+         ;;
+
+      source)
+         # Used to source the script so that functions can be
+         # selectively overridden.
+         return 0
+         ;;
+
+      *)
+         echo "Usage: `basename "$0"` {start|stop|status|restart|force-reload}"
+         exit 1
+   esac
+
+   exit 0
+}
+
+main "$@"
