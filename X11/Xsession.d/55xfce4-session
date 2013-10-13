@@ -5,7 +5,7 @@ if [ "$BASESTARTUP" = x-session-manager ]; then
     BASESTARTUP=$(basename $(readlink /etc/alternatives/x-session-manager))
 fi
 case "$BASESTARTUP" in
-  xfce4-session)
+  xfce4-session|startxfce4)
     # We prepend /usr/share/xfce4 since its defaults.list actually points 
     # to /etc so it is configurable.
     if [ -z "$XDG_DATA_DIRS" ]; then
