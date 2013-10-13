@@ -298,6 +298,7 @@ image/webp; /opt/google/chrome/google-chrome --incognito %s; test=test -n "$DISP
 x-scheme-handler/http; /opt/google/chrome/google-chrome --incognito %s; test=test -n "$DISPLAY"
 x-scheme-handler/https; /opt/google/chrome/google-chrome --incognito %s; test=test -n "$DISPLAY"
 x-scheme-handler/ftp; /opt/google/chrome/google-chrome --incognito %s; test=test -n "$DISPLAY"
+application/x-keepass; keepassx %s; test=test -n "$DISPLAY"
 application/vnd.openofficeorg.extension; libreoffice %s; test=test -n "$DISPLAY"
 application/vnd.oasis.opendocument.text-flat-xml; libreoffice %s; test=test -n "$DISPLAY"
 application/vnd.oasis.opendocument.spreadsheet-flat-xml; libreoffice %s; test=test -n "$DISPLAY"
