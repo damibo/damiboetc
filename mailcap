@@ -62,12 +62,18 @@ audio/x-mp3; vlc '%s'; nametemplate=%s.mp3; description="MPEG Audio"; test=test 
 audio/mpeg4; vlc '%s'; description="MPEG-4 Audio"; test=test -n "$DISPLAY"
 application/mpeg4-iod; vlc '%s'; description="MPEG-4 Video"; test=test -n "$DISPLAY"
 application/mpeg4-muxcodetable; vlc '%s'; description="MPEG-4 Video"; test=test -n "$DISPLAY"
+video/mpeg; xine '%s'; description="MPEG Video"; test=test -n "$DISPLAY"
 text/html; /usr/bin/sensible-browser '%s'; description=HTML Text; nametemplate=%s.html
+application/x-rip; /usr/bin/dvdrip '%s'; description="DVD ripping GUI"; test=test -n "$DISPLAY"
 application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
 text/html; /usr/bin/iceweasel '%s'; description=HTML Text; test=test -n "$DISPLAY";  nametemplate=%s.html
 text/xml; /usr/bin/iceweasel '%s'; description=XML Text; test=test -n "$DISPLAY";  nametemplate=%s.xml
 application/x-info; /usr/bin/info -f '%s'; needsterminal; description=GNU Info document
 message/rfc822; mutt -Rf '%s'; edit=mutt -f '%s'; needsterminal
+audio/basic; /usr/bin/play -t au '%s'
+audio/x-aiff; /usr/bin/play -t aiff '%s'
+audio/x-gsm; /usr/bin/play -t gsm '%s'
+audio/x-wav; /usr/bin/play -t wav '%s'
 application/x-tar; /bin/tar tvf '%s'; print=/bin/tar tvf - | print text/plain:-; copiousoutput
 application/x-gtar; /bin/tar tvzf '%s'; print=/bin/tar tvzf - | print text/plain:-; copiousoutput
 application/zip; unzip -l '%s'; nametemplate=%s.zip; copiousoutput
@@ -306,6 +312,13 @@ application/x-vmware-enc-vm; /usr/bin/vmware %s; test=test -n "$DISPLAY"
 application/x-cd-image; xfburn -i %s; test=test -n "$DISPLAY"
 application/x-cd-image; xfburn -i %s; test=test -n "$DISPLAY"
 text/calendar; orage %s; test=test -n "$DISPLAY"
+x-content/video-dvd; xine %s; test=test -n "$DISPLAY"
+x-content/audio-cdda; xine %s; test=test -n "$DISPLAY"
+x-content/video-vcd; xine %s; test=test -n "$DISPLAY"
+x-content/video-svcd; xine %s; test=test -n "$DISPLAY"
+x-content/video-dvd; xine %s; test=test -n "$DISPLAY"
+x-content/video-svcd; xine %s; test=test -n "$DISPLAY"
+x-content/video-vcd; xine %s; test=test -n "$DISPLAY"
 x-scheme-handler/ghelp; yelp %s; test=test -n "$DISPLAY"
 x-scheme-handler/help; yelp %s; test=test -n "$DISPLAY"
 x-scheme-handler/info; yelp %s; test=test -n "$DISPLAY"
@@ -331,6 +344,10 @@ video/ogg; vlc '%s'; description="Ogg Video"; test=test -n "$DISPLAY"
 application/x-ms-asf-plugin; vlc '%s'; description="Windows Media Video"; test=test -n "$DISPLAY"
 application/x-mplayer2; vlc '%s'; description="Windows Media"; test=test -n "$DISPLAY"
 text/html; /usr/bin/w3m -T text/html '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
+video/mpeg; aaxine '%s'; needsterminal; description="MPEG Video"
+video/x-msvideo; xine '%s'; description="MS Video (AVI)"; test=test -n "$DISPLAY"
+video/x-ms-wmv; xine '%s'; description="MS Video (WMV)"; test=test -n "$DISPLAY"
+video/quicktime; xine '%s'; description="Apple Quicktime Video"; test=test -n "$DISPLAY"
 text/csv; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="CSV Document"; nametemplate=%s.csv
 text/spreadsheet; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="Spreadsheet Interchange Document"; nametemplate=%s.slk
 application/x-quattropro; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="Quattro Pro 6 for Windows Spreadsheet"; nametemplate=%s.wb2
@@ -368,6 +385,9 @@ video/ogg; vlc -I rc -V caca '%s'; needsterminal; description="Ogg Video"
 application/x-ms-asf-plugin; vlc -I rc -V caca '%s'; needsterminal; description="Windows Media Video"
 application/x-mplayer2; vlc -I rc -V caca '%s'; needsterminal; description="Windows Media"
 text/html; /usr/bin/w3m -I %{charset} -dump -T text/html '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
+video/x-msvideo; aaxine '%s'; needsterminal; description="MS Video (AVI)"
+video/x-ms-wmv; aaxine '%s'; needsterminal; description="MS Video (WMV)"
+video/quicktime; aaxine '%s'; needsterminal; description="Apple Quicktime Video"
 image/png;  /usr/bin/iceweasel '%s'; description=PNG Image; test=test -n "$DISPLAY";  nametemplate=%s.png
 image/jpeg;  /usr/bin/iceweasel '%s'; description=JPEG Image; test=test -n "$DISPLAY";  nametemplate=%s.jpeg
 image/gif;  /usr/bin/iceweasel '%s'; description=GIF Image; test=test -n "$DISPLAY";  nametemplate=%s.gif
