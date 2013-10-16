@@ -37,3 +37,4 @@ rocio:$6$916s0XFN$fPH.9QAumCsP7rFdonbt.FYaLSJNNZ4LeErGutOvVHE1tI0GFO56Z0bfxU.zmS
 victor:$6$HEZMI8cd$g0AI0cl.gKjSukUYF6rOgkCfS5AxW.pLbJptqOC3wReGsXqg5R/TtkOFD6xpEAX/GzNwKysPY/hWHbCtDRrMe.:15984:0:99999:7:::
 pedro:$6$NxkLtGRp$fz3hwDMhigeWpIl4HjOmpd3MDg4Lyoo4l/vtOAhkIOvjv7VrD0bKOj6uYTeTr5.Qba0w7w4TgT6YMyKtvKQXk0:15984:0:99999:7:::
 clamav:!:15991:0:99999:7:::
+ntp:*:15994:0:99999:7:::
