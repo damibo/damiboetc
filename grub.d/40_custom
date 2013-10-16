@@ -6,8 +6,8 @@ exec tail -n +3 $0
 
 menuentry "android" {
 
-	set root=(hd1,2)
-	linux /android-4.30-test/kernel quiet root=/dev/ram0 androidboot.hardware=eeepc acpi_sleep=s3_bios,s3mode SRC=/android-4.3-test
+	set root=(hd0,6)
+	linux /android-4.3-test/kernel quiet root=/dev/ram0 androidboot.hardware=eeepc acpi_sleep=s3_bios,s3mode SRC=/android-4.3-test
 	initrd /android-4.3-test/initrd.img
 
 
