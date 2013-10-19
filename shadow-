@@ -1,4 +1,4 @@
-root:$6$ZNPceM9f$qmR4qgOdxSQ.TnR95UQhaTvrvytNMnOsO2q5PxLp0GNnr6hre5j6a9QrJFXSRlFvOPcGPuX/1iBgQ13GahiZY.:15984:0:99999:7:::
+root:$6$VUTkU2ys$bvui8NZyB7eBs3MGqNeNUfmjuaTEDjQRK.buiQ1UYx3GCXqDrNdd5mGRrZdIjPalna4po2AjvZou3.gsAbAvD0:15997:0:99999:7:::
 daemon:*:15984:0:99999:7:::
 bin:*:15984:0:99999:7:::
 sys:*:15984:0:99999:7:::
@@ -38,3 +38,4 @@ victor:$6$HEZMI8cd$g0AI0cl.gKjSukUYF6rOgkCfS5AxW.pLbJptqOC3wReGsXqg5R/TtkOFD6xpE
 pedro:$6$NxkLtGRp$fz3hwDMhigeWpIl4HjOmpd3MDg4Lyoo4l/vtOAhkIOvjv7VrD0bKOj6uYTeTr5.Qba0w7w4TgT6YMyKtvKQXk0:15984:0:99999:7:::
 clamav:!:15991:0:99999:7:::
 ntp:*:15994:0:99999:7:::
+mysql:!:15997:0:99999:7:::

@@ -66,3 +66,4 @@ pedro:x:1005:
 vboxusers:x:121:
 clamav:x:122:
 ntp:x:123:
+mysql:x:124:
