@@ -39,7 +39,7 @@ users:x:100:
 nogroup:x:65534:
 libuuid:x:101:
 crontab:x:102:
-fuse:x:103:
+fuse:x:103:damibo
 ssl-cert:x:104:
 lpadmin:x:105:
 messagebus:x:106:
