@@ -100,6 +100,7 @@ application/x-gtar; /bin/tar tvzf '%s'; print=/bin/tar tvzf - | print text/plain
 application/zip; unzip -l '%s'; nametemplate=%s.zip; copiousoutput
 text/plain; more '%s'; needsterminal
 application/ogg; ogg123 '%s'; description="Ogg Vorbis multimedia format"
+application/x-msdos-program; /usr/bin/wine-safe '%s'; description=Windows Executable
 application/x-rar; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="RAR Archive"; test=test -n "$DISPLAY" && test -e /usr/bin/unrar
 application/rar; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="RAR Archive"; test=test -n "$DISPLAY" && test -e /usr/bin/unrar
 application/x-arj; /usr/bin/xarchiver -- '%s'; edit=/usr/bin/xarchiver -- '%s'; description="ARJ Archive"; test=test -n "$DISPLAY" && test -e /usr/bin/arj
@@ -337,6 +338,9 @@ application/x-vmware-enc-vm; /usr/bin/vmplayer %s; test=test -n "$DISPLAY"
 application/x-vmware-vm; /usr/bin/vmware %s; test=test -n "$DISPLAY"
 application/x-vmware-team; /usr/bin/vmware %s; test=test -n "$DISPLAY"
 application/x-vmware-enc-vm; /usr/bin/vmware %s; test=test -n "$DISPLAY"
+application/x-ms-dos-executable; wine start /unix %s; test=test -n "$DISPLAY"
+application/x-msi; wine start /unix %s; test=test -n "$DISPLAY"
+application/x-ms-shortcut; wine start /unix %s; test=test -n "$DISPLAY"
 application/x-cd-image; xfburn -i %s; test=test -n "$DISPLAY"
 application/x-cd-image; xfburn -i %s; test=test -n "$DISPLAY"
 text/calendar; orage %s; test=test -n "$DISPLAY"
