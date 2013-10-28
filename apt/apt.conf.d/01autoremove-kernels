@@ -8,5 +8,10 @@ APT
     "^linux-signed-image-3.10-3-amd64$";
     "^linux-backports-modules-.*-3.10-3-amd64$";
     "^linux-headers-3.10-3-amd64$";
+    "^linux-image-3.11-1-amd64$";
+    "^linux-image-extra-3.11-1-amd64$";
+    "^linux-signed-image-3.11-1-amd64$";
+    "^linux-backports-modules-.*-3.11-1-amd64$";
+    "^linux-headers-3.11-1-amd64$";
   };
 };

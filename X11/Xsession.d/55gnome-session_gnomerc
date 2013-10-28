@@ -1,6 +1,7 @@
 # If we are running the GNOME session, source ~/.gnomerc
 
-BASESTARTUP=$(basename "$STARTUP" | cut -d\  -f1)
+BASESTARTUP=${STARTUP%% *}
+BASESTARTUP=${BASESTARTUP##*/}
 if [ "$BASESTARTUP" = x-session-manager ]; then
     BASESTARTUP=$(basename $(readlink /etc/alternatives/x-session-manager))
 fi
