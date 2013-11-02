@@ -39,4 +39,5 @@ pedro:x:1005:1005:,,,:/home/pedro:/bin/bash
 clamav:x:114:122::/var/lib/clamav:/bin/false
 ntp:x:115:123::/home/ntp:/bin/false
 mysql:x:116:124:MySQL Server,,,:/nonexistent:/bin/false
-Debian-gdm:x:117:125::/var/lib/gdm3:/bin/false
+Debian-gdm:x:117:125:Gnome Display Manager:/var/lib/gdm3:/bin/false
+hasefroch:x:1006:1006::/home/hasefroch:/bin/bash
