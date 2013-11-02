@@ -17,8 +17,8 @@ UUID=1549a53c-71fb-4d86-8541-579abb28a15b none            swap    sw            
 
 # /home was on /dev/sdb1 during installation
 UUID=cf9b388f-1c92-44e2-9bed-fa3886fcab9f /home           ext4    defaults        0       2
-#/home/mmumedia
-UUID=abd60186-2c0a-440b-92d3-1d87477afe8a /home/mmumedia	ext4	defaults	0	0
+#/home/damibo
+UUID=abd60186-2c0a-440b-92d3-1d87477afe8a /home/damibo	ext4	defaults	0	0
 
 //192.168.10.1/Disc-A1 /home/mnt/samba/fonera cifs user,uid=1000,rw,suid,credentials=/root/bin/contra.txt 1 5
 

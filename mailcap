@@ -64,6 +64,17 @@ application/mpeg4-iod; vlc '%s'; description="MPEG-4 Video"; test=test -n "$DISP
 application/mpeg4-muxcodetable; vlc '%s'; description="MPEG-4 Video"; test=test -n "$DISPLAY"
 video/mpeg; xine '%s'; description="MPEG Video"; test=test -n "$DISPLAY"
 text/html; /usr/bin/sensible-browser '%s'; description=HTML Text; nametemplate=%s.html
+application/x-msdos-program; /opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-exe::install '%s'; test=test -n "$DISPLAY"
+x-content/win32-software; /opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-exe::install '%s'; test=test -n "$DISPLAY"
+application/x-crossover-exe; /opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-exe::install '%s'; test=test -n "$DISPLAY"
+application/x-ms-shortcut; /opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-lnk::run '%s'; test=test -n "$DISPLAY"
+application/x-crossover-lnk; /opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-lnk::run '%s'; test=test -n "$DISPLAY"
+application/x-win-lnk; /opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-lnk::run '%s'; test=test -n "$DISPLAY"
+application/x-msi; /opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-msi::install '%s'; test=test -n "$DISPLAY"
+application/x-crossover-msi; /opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-msi::install '%s'; test=test -n "$DISPLAY"
+application/x-crossover-cxarchive; /opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-cxarchive::restore '%s'; test=test -n "$DISPLAY"
+application/x-crossover-c4p; /opt/cxoffice/support/desktopdata/cxoffice-1/cxassoc/Scripts/cxoffice-1:application_x-crossover-c4p::install '%s'; test=test -n "$DISPLAY"
+application/x-crossover-tie; /opt/cxoffice/support/desktopdata/cxoffice-1/cxassoc/Scripts/cxoffice-1:application_x-crossover-tie::install '%s'; test=test -n "$DISPLAY"
 application/x-rip; /usr/bin/dvdrip '%s'; description="DVD ripping GUI"; test=test -n "$DISPLAY"
 application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
 text/html; /usr/bin/iceweasel '%s'; description=HTML Text; test=test -n "$DISPLAY";  nametemplate=%s.html
