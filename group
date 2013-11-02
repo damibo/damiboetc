@@ -69,3 +69,4 @@ ntp:x:123:
 mysql:x:124:
 Debian-gdm:x:125:
 hasefroch:x:1006:
+sambashare:x:126:
