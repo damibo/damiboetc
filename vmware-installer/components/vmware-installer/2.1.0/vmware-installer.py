@@ -37,25 +37,9 @@ class VMwareInstaller(Installer):
                           required=True, mustExist=False, level='CUSTOM')
 
       _addQuestion('Directory', key='prefix',
-                   text='System path prefix. Please note that choosing a path other '
-                   'than /usr may result in missing icons, application launchers, and '
-                   'other desktop integrations.', default=PREFIX)
-
-      _addQuestion('Directory', 'libdir', text='System lib directory.', default=LIBDIR)
-
-      _addQuestion('Directory', key='datadir', text='Architecture-independent files.',
-                   default=DATADIR)
-
-      _addQuestion('Directory', key='bindir', text='User level binaries.', default=BINDIR)
-
-      _addQuestion('Directory', key='sbindir', text='Super user level binaries.',
-                   default=SBINDIR)
-
-      _addQuestion('Directory', key='docdir', text='Documentation.', default=DOCDIR)
-
-      _addQuestion('Directory', key='mandir', text='Manual pages.', default=MANDIR)
-
-      _addQuestion('Directory', key='includedir', text='Header files.', default=INCLUDEDIR)
+                   text='Product installation path prefix. '\
+                   '(Desktop integration files, such as icons and .desktop entries, '\
+                   'will still be installed under /usr.)', default=PREFIX)
 
       # XXX: Using non-default sysconfdir is not supported now. Comment out.
       #_addQuestion('Directory', key='sysconfdir', text='System configuration files.',
@@ -106,7 +90,8 @@ class VMwareInstaller(Installer):
                                   'Do you wish to keep your configuration files?',
                              required=False,
                              default=keepConfigStored,
-                             level='REGULAR')
+                             level='REGULAR',
+                             secondaryText='Uninstall')
 
    def InitializeInstall(self, old, new, upgrade):
       bin = DEST/''
@@ -224,7 +209,7 @@ class VMwareInstaller(Installer):
       bootstrap.write_bytes('VMWARE_INSTALLER="%s"\n\n' % DEST, append=False)
       bootstrap.write_bytes('VERSION="%s" # For backwards compatibility\n' % legacyVersionStamp, append=True)
       bootstrap.write_bytes('VMISVERSION="%s"\n' % '2.1.0', append=True)
-      bootstrap.write_bytes('VMISBUILDNUM="%s"\n' % '1278091', append=True)
+      bootstrap.write_bytes('VMISBUILDNUM="%s"\n' % '1369167', append=True)
       bootstrap.write_bytes('VMISPYVERSION="%s"\n' % PYTHON_VERSION, append=True)
 
 

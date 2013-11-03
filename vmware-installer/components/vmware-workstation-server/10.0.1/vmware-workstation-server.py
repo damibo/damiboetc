@@ -33,7 +33,7 @@ class VmwareWorkstationServer(Installer):
                        header='Please enter the user that will initially connect to Workstation Server.'
                               ' Without setting this correctly, you will not be able to share VMs with other users.',
                        footer='Additional users and administrators can be configured later in Workstation by selecting'
-                              ' "Shared VMs" and clicking "Manage Permissions".',
+                              ' "Shared VMs" and clicking "Permissions".',
                        level=qlevel)
 
       datastore = self.GetAnswer('datastore')

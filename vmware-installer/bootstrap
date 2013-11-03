@@ -2,5 +2,5 @@ VMWARE_INSTALLER="/usr/lib/vmware-installer/2.1.0"
 
 VERSION="2.1.0" # For backwards compatibility
 VMISVERSION="2.1.0"
-VMISBUILDNUM="1278091"
+VMISBUILDNUM="1369167"
 VMISPYVERSION="25"
