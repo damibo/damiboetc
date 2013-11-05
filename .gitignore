@@ -52,3 +52,6 @@ fake-hwclock.data
 DEADJOE
 
 # end section managed by etckeeper
+
+shadow
+shadow-
